@@ -1,0 +1,16 @@
+@import "styles/breakpoints";
+@import "styles/variaveis";
+
+
+.dropdownEdit {
+    border: none;
+    outline: none;
+    background-color: white;
+    color: $cor1;
+    padding: 1rem;
+    float: right;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,138 @@
+@import 'styles/variaveis';
+@import 'styles/breakpoints';
+
+.inativo {
+    display: none;
+}
+
+.formPostagem {
+    background-color: $cor2;
+
+    div {
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea, .dropdown {
+            width: 50%;
+            min-width: 200px;
+            border: $cor1 solid 1px;
+            margin-bottom: 0.5rem;
+            outline: none;
+        }
+
+    }
+
+    button[type=button] {
+        border: $cor1 solid 1px;
+        background-color: transparent;
+        color: $cor1;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+            background-color: $cor1;
+            color: $cor2;
+        }
+    }
+
+    input[type=file] {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.largeButton {
+    width: 100%;
+    border: $cor1 solid 1px;
+    background-color: $cor1;
+    color: $cor2;
+    padding: 0.5rem;
+
+    &:hover {
+        background-color: $cor2;
+        color: $cor1;
+    }
+}
+
+.previewList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__preview {
+        width: 120px;
+        display: flex;
+        flex-direction: row;
+        margin: 0.5rem 0;
+        align-items: center;
+        margin: 0.5rem;
+        justify-content: space-between;
+
+        button {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        &__prevImg {
+            width: 100px;
+            height: 25px;
+            object-fit: cover;
+        }
+
+        &__xis {
+            height: 12px;
+        }
+
+    }
+}
+
+
+.postagens {
+    background-color: transparent;
+    padding: 0;
+
+
+    &__postagem {
+        margin: 10px 0 10px 0;
+        background-color: $cor2;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        div {
+            background-color: $cor3;
+
+            img {
+                object-fit: contain;
+                max-height: 80vh;
+            }
+        }
+
+        p,
+        h2 {
+            padding: 0.5rem 0;
+        }
+
+        a {
+            background-color: white;
+            width: 22px;
+            display: flex;
+        }
+    }
+
+    .singleImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

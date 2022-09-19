@@ -1,0 +1,98 @@
+@import 'styles/variaveis';
+@import 'styles/breakpoints';
+
+* {
+    margin: none;
+    padding: none;
+}
+
+.loginForm {
+    @media (max-width: $mobile) {
+        width: 100%;
+        height: 100%;
+    }
+
+    width: 350px;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: $cor2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    label {
+        color: $cor1;
+        margin-bottom: 20px;
+    }
+
+    div {
+        width: 100%;
+    }
+
+    input {
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: $cor1 1px solid;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    hr {
+        border-top: none;
+        border-bottom: solid 1px $cor1 !important;
+        width: 100%;
+    }
+}
+
+.loginButton {
+
+    &:hover,
+    &:focus {
+        background-color: $cor2;
+        color: $cor1 !important;
+        border: solid 1px $cor1;
+        cursor: pointer;
+    }
+
+    border: none;
+    outline: none;
+    background-color: $cor1;
+    color: $cor2;
+    border-radius: 4px;
+    font-size: large;
+    padding: 10px 15px 10px 15px;
+    margin:30px;
+}
+
+.pinscricao {
+    font-size: medium;
+    color: var(--color);
+}
+
+.inscricao {
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    border: none;
+    outline: none;
+    background-color: var(--color2);
+    color:var(--EditAndLink);
+    font-size: medium;
+    text-decoration: none;
+}

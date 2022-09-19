@@ -1,0 +1,15 @@
+@import "styles/breakpoints";
+@import "styles/variaveis";
+
+.userForm {
+    input{
+        outline: none;
+        border: none;
+        width: 50%;
+        margin: 1.2rem 0 0 0;
+    }
+
+    hr{
+        margin: 0;
+    }
+}
