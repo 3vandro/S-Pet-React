@@ -4,6 +4,7 @@ import Perfil from './pages/Perfil';
 import PaginaPadrao from 'components/PaginaPadrao';
 import Login from 'pages/Login';
 import Cadastro from 'pages/Cadastro';
+import EditarPost from 'pages/Feed/AtualizaFeed';
 
 export default function AppRouter() {
     return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
                     <Route path="/" element={<Login />} />
                     <Route path="/user" element={<PaginaPadrao />} >
                         <Route path="feed/:id" index element={<Feed />} />
+                        <Route path="editarpost/:id" index element={<EditarPost />} />
                         <Route path="perfil/:id" element={<Perfil />} />
                     </Route>
                     <Route path="/cadastro" element={<Cadastro />} />

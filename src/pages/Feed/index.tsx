@@ -7,7 +7,7 @@ import xis from 'assets/imagens/x-mark-16.png';
 import http from 'api';
 import { useParams } from 'react-router-dom';
 import IPost from 'interfaces/IPost';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Row } from 'react-bootstrap';
 // import DropdownEdit from 'components/Dropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -100,6 +100,7 @@ const Feed = () => {
         if (conteudo !== '' || prevImg.length) {
 
             http.patch('posts/', {
+                _id: params.id,
                 date: new Date(),
                 userId: params.id,
                 title: titulo,
@@ -125,8 +126,7 @@ const Feed = () => {
         }
        
     }
-
-
+   
 
     return (
         <main className='container'>
@@ -180,7 +180,7 @@ const Feed = () => {
                     {/* BOTÃO EDITAR E EXCLUIR  */}
                         <div className='dropdown'>
                             <DropdownButton variant= 'Warning' className={style.dropdownEdit} title="">
-                            <Dropdown.Item as="button"  onClick={updatePost}>Editar</Dropdown.Item>
+                            <Dropdown.Item as="button"  href={'editarpost/'+posts._id}>Editar</Dropdown.Item>
                             <Dropdown.Item as="button">Excluir</Dropdown.Item>
                             </DropdownButton>
                             </div> 
