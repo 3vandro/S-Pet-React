@@ -100,38 +100,7 @@ const Feed = () => {
         }
     }
 
-    // ATUALIZAR POST
-    const updatePost = () => {
-        if (conteudo !== '' || prevImg.length) {
-
-            http.patch('posts/', {
-                _id: params.id,
-                date: new Date(),
-                userId: params.id,
-                title: titulo,
-                image: prevImg,
-                content: conteudo
-            })
-                .then(() => {
-                    alert('Conteúdo atrualizado com sucesso!')
-                    setInativo(!inativo)
-                    http.get('posts/')
-                        .then(res => {
-                            setFeed(res.data)
-                        })
-                        .catch(error => console.log(error))
-                    setTitulo('')
-                    setConteudo('')
-                    setPrevImg([])
-                }
-                )
-                .catch(error => console.log(error))
-        } else {
-            alert('A publicação precisa ter um texto ou uma imagem.')
-        }
-    
-    
-    }
+   
 
     const navigate = useNavigate();   
 
