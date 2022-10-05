@@ -23,7 +23,8 @@
     object-fit: cover;
     width: 100%;
     object-position: 20%;
-
+    cursor: pointer;
+    
     @media (max-width: $mobile) {
       height: 90px;
     }
@@ -53,6 +54,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    cursor: pointer;
   }
 }
 
@@ -67,7 +69,7 @@
   height: 70%;
 
   &__user {
-
+    position: relative; 
     @media (max-width: $mobile) {
       img{
         height: 90px;
@@ -80,7 +82,6 @@
     img {
       height: 100px;
       width: 100px;
-      cursor: pointer;
       object-fit: cover;
       border: solid $cor1;
       border-radius: 50%;
@@ -96,6 +97,7 @@
   }
 
   &__pets {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

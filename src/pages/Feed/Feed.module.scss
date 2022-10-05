@@ -16,7 +16,7 @@
         }
 
         input,
-        textarea, .dropdown {
+        textarea {
             width: 50%;
             min-width: 200px;
             border: $cor1 solid 1px;
@@ -134,5 +134,22 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+.editarDeletar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: $cor2!important;
+    width: 100%;
+    button{
+        background-color: $cor2;
+        border: none;
+    }
+   
+    img{
+        height: 12px;
+        width: 12px;
     }
 }
